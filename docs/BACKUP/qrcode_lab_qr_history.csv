@@ -1,0 +1,67 @@
+id,numero_impresion,informacion,fecha,usuario,qr_id
+1,2,LLEGO MATERIAL,12:54:22 a. m.,medical,453
+2,10,llego material,12:01:52 a. m.,medical,404
+3,2,llego material de reemplazo,12:46:02 a. m.,medical,411
+4,2,llego material de reemplazo,12:49:06 a. m.,medical,415
+5,1,llego material,12:55:30 a. m.,medical,312
+6,1,llego material,12:56:01 a. m.,medical,22
+7,1,llego material,12:56:49 a. m.,medical,112
+8,2,llego material,12:57:20 a. m.,medical,167
+9,2,llego material,12:34:15 a. m.,medical,448
+10,20,prueba por Mike,12:18:17 a. m.,medical,60
+11,1,Llego material 24/08/2021,12:17:24 a. m.,medical,240
+12,1,Llego material 24/08/2021,12:18:27 a. m.,medical,240
+13,1,llego material,12:21:19 a. m.,medical,240
+14,1,llego material 24/08/2021,12:01:01 a. m.,medical,240
+15,1,llego material 24/08/2021,12:06:20 a. m.,medical,263
+16,1,llego material 24/08/2021,12:09:30 a. m.,medical,430
+17,1,llego material 24/08/2021,12:20:33 a. m.,medical,3
+18,2,LLEGO MATERIAL,12:46:56 a. m.,medical,454
+62,1,"aqui ponemos info, el historial guarda fecha, veces que fue impreso, clave, y de mas",12:53:00 a. m.,medical,3
+63,1,"aqui ponemos info, el historial guarda fecha, veces que fue impreso, clave, y de mas",12:55:20 a. m.,medical,3
+64,25,bine,12:58:19 a. m.,medical,6
+65,2,Llego material,12:30:48 a. m.,medical,64
+66,1,Llegó material,12:55:00 a. m.,medical,134
+67,1,LLEGO MATERIAL,12:51:04 a. m.,medical,185
+68,1,LLEGO MATERIAL,12:54:28 a. m.,medical,164
+69,1,LLEGO MATERIAL,12:55:19 a. m.,medical,313
+70,5,"Inventario, se necesitan más etiquetas",12:34:53 a. m.,medical,390
+71,5,Se necesitan más etiquetas,12:42:53 a. m.,medical,406
+72,2,Se necesitan más etiquetas,12:43:44 a. m.,medical,399
+73,2,Se necesitan más etiquetas,12:45:13 a. m.,medical,403
+74,2,Se necesitan más etiquetas,12:45:49 a. m.,medical,378
+75,1,Se necesitan más etiquetas,12:46:47 a. m.,medical,401
+76,7,Se necesitan más etiquetas,12:47:19 a. m.,medical,405
+77,2,Se necesitan más etiquetas,12:49:04 a. m.,medical,32
+78,4,Se necesitan más etiquetas,12:49:46 a. m.,medical,49
+79,3,Se necesitan más etiquetas,12:50:25 a. m.,medical,11
+80,2,Se necesitan más etiquetas,12:45:24 a. m.,medical,249
+81,2,Se necesitan mas etiquetas,12:50:53 a. m.,medical,185
+82,3,Se necesitan mas etiquetas,12:57:45 a. m.,medical,132
+83,1,Se necesitan mas etiquetas,12:58:25 a. m.,medical,19
+84,8,Se necesitan mas etiquetas,12:59:06 a. m.,medical,129
+85,3,Se necesitan mas etiquetas,12:59:48 a. m.,medical,238
+86,1,Se necesitan mas etiquetas,12:00:34 a. m.,medical,328
+87,4,Se necesitan mas etiquetas,12:01:10 a. m.,medical,404
+88,7,Se necesitan mas etiquetas,12:01:43 a. m.,medical,370
+90,1,Llegó Material,12:52:00 a. m.,medical,46
+91,8,Llegó material,12:01:46 a. m.,medical,328
+92,1,llego material,12:16:48 a. m.,medical,393
+93,1,llego material 16/08/2021,12:11:23 a. m.,medical,230
+94,1,llego material 16/08/2021,12:14:15 a. m.,medical,235
+95,1,llego material 16/08/2021,12:16:14 a. m.,medical,270
+96,1,llego material 16/08/2021,12:17:17 a. m.,medical,288
+97,1,llego material 16/08/2021,12:18:03 a. m.,medical,289
+98,1,llego material 16/08/2021,12:18:57 a. m.,medical,136
+99,1,llego material 16/08/2021,12:19:41 a. m.,medical,137
+100,1,llego material 16/08/2021,12:20:28 a. m.,medical,162
+101,1,llego material 16/08/2021,12:21:10 a. m.,medical,252
+103,1,prueba,12:36:39 a. m.,medical,3
+104,1,llego material 16/08/2021,12:37:14 a. m.,medical,233
+107,4,llego material,12:43:29 a. m.,medical,369
+108,1,llego material,12:28:57 a. m.,medical,204
+109,1,llego material,12:29:42 a. m.,medical,205
+110,2,llego material,12:33:45 a. m.,medical,398
+111,10,Prueba de impresión,12:04:32 a. m.,medical,60
+112,4,llego material,12:17:38 a. m.,medical,247
+113,3,llego aterial,12:18:27 a. m.,medical,210

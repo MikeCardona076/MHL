@@ -33,6 +33,13 @@
   <!-- CUSTOM CSS -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    
+  <!-- semantic UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
 </head>
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
@@ -54,12 +61,12 @@
         <div class="search-bar">
           <form method="get">
             <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Buscar estudio y/o Perfil de laboratorio">
-              <span class="input-group-btn">
+              <input type="text" class="form-control" id ="exampleFormControlInput1" onkeyup="MyFilterfunctionbyname()" placeholder="Buscar ">
+              {% comment %} <span class="input-group-btn">
                 <button type="submit" class="btn btn-primary">
                   <span class="fa fa-search"></span>
                 </button>
-              </span>
+              </span> {% endcomment %}
             </div>
           </form>
         </div>
@@ -82,54 +89,121 @@
 			<div class="col-lg-3">
 				<nav class="privacy-nav">
 					<ul>
-						<li><a class="nav-link scrollTo" href="#userLicense" class="scrollTo">Nombre </a></li>
-						<li><a class="nav-link scrollTo" href="#disclaimer" class="scrollTo">Metodologia</a></li>
-						<li><a class="nav-link scrollTo" href="#limitations" class="scrollTo">Grupo</a></li>
-						<li><a class="nav-link scrollTo" href="#governigLaw" class="scrollTo">Indicaciones</a></li>
+						<li><a class="nav-link scrollTo" href="#nombreyclave" class="scrollTo">Nombre y clave</a></li>
+						<li><a class="nav-link scrollTo" href="#metodologia" class="scrollTo">Metodologia</a></li>
+						<li><a class="nav-link scrollTo" href="#grupo" class="scrollTo">Grupo</a></li>
+						<li><a class="nav-link scrollTo" href="#contenedor" class="scrollTo">Contenedor </a></li>
+            <li><a class="nav-link scrollTo" href="#alias" class="scrollTo">Alias</a></li>
+            <li><a class="nav-link scrollTo" href="#tipodemuestra" class="scrollTo">Tipo de muestra</a></li>
+            <li><a class="nav-link scrollTo" href="#sexo" class="scrollTo">Sexo</a></li>
+            <li><a class="nav-link scrollTo" href="#indicaciones" class="scrollTo">Indicaciones</a></li>
 					</ul>
 				</nav>
 			</div>
 			<div class="col-lg-9">
+
+       {% for i in estudios_perfiles %}
 				<div class="block">
-					<!-- User License -->
-					<div id="userLicense" class="policy-item">
-						<div class="title">
-							<h3>Nombre del estudio</h3>
-						</div>
-						<div class="policy-details">
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinara.</p>
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinara.</p>
-						</div>
-					</div>
-					<!-- Disclaimer -->
-					<div id="disclaimer" class="policy-item">
-						<div class="title">
-							<h3>Metodologia</h3>
-						</div>
-						<div class="policy-details">
-							<p>Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-						</div>
-					</div>
-					<!-- Limitations -->
-					<div id="limitations" class="policy-item">
-						<div class="title">
-							<h3>Grupo</h3>
-						</div>
-						<div class="policy-details">
-							<p>Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-						</div>
-					</div>
-					<!-- Governing Law -->
-					<div id="governigLaw" class="policy-item">
-						<div class="title">
-							<h3>Indicaciones</h3>
-						</div>
-						<div class="policy-details">
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinara.</p>
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinara.</p>
-						</div>
-					</div>
+              <!-- User License -->
+              <div id="nombreyclave" class="policy-item">
+                <div class="title">
+                  <h3>Nombre del estudio y clave</h3>
+                </div>
+                <div class="policy-details">
+                  <p class="identificador">{{ i.nombre }} {{ i.clave }}</p>
+                </div>
+              </div>
+
+
+              <!-- Disclaimer -->
+              <div id="metodologia" class="policy-item">
+                <div class="title">
+                  <h3>Metodologia</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.metodo }}</p>
+                </div>
+              </div>
+              <!-- Limitations -->
+              <div id="grupo" class="policy-item">
+                <div class="title">
+                  <h3>Grupo</h3>
+                </div>
+                <div class="policy-details">
+                  <p> {{ i.grupo }}</p>
+                </div>
+              </div>
+              <!-- Governing Law -->
+              <div id="contenedor" class="policy-item">
+                <div class="title">
+                  <h3>Contenedor</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{i.contenedor}}</p>
+                </div>
+              </div>
+              
+              <!-- Alias -->
+              <div id="alias" class="policy-item">
+                <div class="title">
+                  <h3>Alias</h3>
+                </div>
+                <div class="policy-details">
+                  <p>Alias</p>
+                </div>
+              </div>
+              
+              <!--  Tipo de muestra  -->
+              <div id="tipodemuestra" class="policy-item">
+                <div class="title">
+                  <h3>Tipo de Muestra</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.tipo_muestra }}</p>
+                </div>
+              </div>
+
+              <!--  Sexo  -->
+              <div id="sexo" class="policy-item">
+                <div class="title">
+                  <h3>Sexo</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.sexo }}</p>
+                </div>
+              </div>
+
+              <!--  Indicaciones  -->
+              <div id="indicaciones" class="policy-item">
+                <div class="title">
+                  <h3>Indicaciones</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.indicaciones }}</p>
+                </div>
+              </div>
+          
+                <script>
+                    function MyFilterfunctionbyname() 
+                    {
+                      var filter = document.getElementById("exampleFormControlInput1").value;
+                      var snippets = document.getElementsByClassName("block");
+                      for (var i = 0; i < snippets.length; i++) {
+                        snippets[i].style.display = "none";
+                      }
+                      var myArray = document.getElementsByClassName("block");
+                      for (var i = 0; i < myArray.length; i++) {
+                        var myArrayText = myArray[i].getElementsByClassName("policy-item")[0].innerHTML;
+                        if (myArrayText.toLowerCase().indexOf(filter.toLowerCase()) > -1) {
+                          myArray[i].style.display = "block";
+                        }
+                      }
+                    }
+
+                </script>
+
 				</div>
+        {% endfor %}
 			</div>
 		</div>
 	</div>
@@ -139,7 +213,7 @@
 <!--============================
 =            Footer            =
 =============================-->
-<footer>
+{% comment %} <footer>
   <div class="footer-main">
     <div class="container">
       <div class="row">
@@ -216,7 +290,7 @@
   <div class="text-center bg-dark py-4">
     <small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></small class="text-secondary">
   </div>
-</footer>
+</footer> {% endcomment %}
 
 {% endblock body %}
   <!-- To Top -->

@@ -1160,8 +1160,8 @@ button:focus,
   width: 200%;
   height: 200%;
   border-radius: 50%;
-  /* background-image: linear-gradient(45deg, #009EC5 0%, #2e7eed 20%, #02225B 50%);  */
-  background: linear-gradient(45deg, #00c53b 0%, #2eed2e 20%, #2d5b02 50%);
+  
+  background: linear-gradient(45deg, #00c53b 0%, #06ca06 20%, #8bdd39 50%);
   
 }
 

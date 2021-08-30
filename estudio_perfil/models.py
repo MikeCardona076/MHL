@@ -20,28 +20,33 @@ GROUP_CHOICES = (
 
 
 CONTENT_CHOICES = (
-    ('Amarillo', '01'),
-    ('Dorado', '04'),
-    ('Azul', '03'),
-    ('Verde', '05'),
-    ('Rojo', '06'),
-    ('Morado', '02'),
-    ('Caja de Petri', '07'),
-    ('Culturete', '08'),
-    ('Frasco con Formol', '09'),
-    ('Frasco esteril', '010'),
-    ('Frasco con aditivo', '011'),
-    ('Frasco con medio de Michel', '012'),
-    ('Exudado', '013'),
-    ('Hisopo', '014'),
-    ('Frasco PCR', '015'),
-    ('Transporte', '016'),
-    ('Laminilla', '017'),
-    ('Jeringa', '018'),
-    ('Trampa', '019'),
-    ('Frotis', '020'),
-    ('Medio para hemocultivo', '021'),
-    ('Contenedor de heces fecales', '022'),
+    ('Amarillo', 'Amarillo'),
+    ('Dorado', 'Dorado'),
+    ('Azul', 'Azul'),
+    ('Verde', 'Verde'),
+    ('Rojo', 'Rojo'),
+    ('Morado', 'Morado'),
+    ('Caja de Petri', 'Caja de Petri'),
+    ('Culturete', 'Culturete'),
+    ('Frasco con Formol', 'Frasco con Formol'),
+    ('Frasco esteril', 'Frasco esteril'),
+    ('Frasco con aditivo', 'Frasco con aditivo'),
+    ('Frasco con medio de Michel', 'Frasco con medio de Michel'),
+    ('Exudado', 'Exudado'),
+    ('Hisopo', 'Hisopo'),
+    ('Frasco PCR', 'Frasco PCR'),
+    ('Transporte', 'Transporte'),
+    ('Laminilla', 'Laminilla'),
+    ('Jeringa', 'Jeringa'),
+    ('Trampa', 'Trampa'),
+    ('Frotis', 'Frotis'),
+    ('Medio para hemocultivo', 'Medio para hemocultivo'),
+    ('Contenedor de heces fecales', 'Contenedor de heces fecales'),
+)
+SEXO_CHOICES = (
+    ('Hombre', 'Hombre'),
+    ('Mujer', 'Mujer'),
+    ('Ambos', 'Ambos'),
 )
 
 
@@ -52,13 +57,15 @@ class Estudio_perfil(models.Model):
     subrogado = models.BooleanField(default=False)
     grupo = models.CharField(max_length=100, choices=GROUP_CHOICES)
     contenedor = models.CharField(max_length=100, choices=CONTENT_CHOICES)
-    precio = models.DecimalField(max_digits=10, decimal_places=2)
-    sinonimo1 = models.CharField(max_length=100)
-    sinonimo2 = models.CharField(max_length=100)
+    #precio = models.DecimalField(max_digits=10, decimal_places=2)
+    #sinonimo1 = models.CharField(max_length=100)
+    #sinonimo2 = models.CharField(max_length=100)
     metodo = models.CharField(max_length=100)
-    tipo_muestra = models.CharField(max_length=100)
+    tipo_muestra = models.CharField(max_length=100) 
     equipo = models.CharField(max_length=100)
     indicaciones = models.CharField(max_length=100)
+    sexo = models.CharField(max_length=10, choices=SEXO_CHOICES, default='Ambos')
+
     def __str__(self):
         return self.nombre
 
