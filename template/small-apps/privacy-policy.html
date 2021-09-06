@@ -86,7 +86,7 @@
 <section class="privacy section pt-0">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<!-- <div class="col-lg-3">
 				<nav class="privacy-nav">
 					<ul>
 						<li><a class="nav-link scrollTo" href="#nombreyclave" class="scrollTo">Nombre y clave</a></li>
@@ -99,18 +99,32 @@
             <li><a class="nav-link scrollTo" href="#indicaciones" class="scrollTo">Indicaciones</a></li>
 					</ul>
 				</nav>
-			</div>
-			<div class="col-lg-9">
+			</div> -->
+      <!-- #center -->
+     
+			<div class="col-lg-12">
 
        {% for i in estudios_perfiles %}
 				<div class="block">
               <!-- User License -->
               <div id="nombreyclave" class="policy-item">
                 <div class="title">
-                  <h3>Nombre del estudio y clave</h3>
+                  <h3>Nombre del estudio y/o perfil de laboratorio</h3>
                 </div>
                 <div class="policy-details">
-                  <p class="identificador">{{ i.nombre }} {{ i.clave }}</p>
+                  <p class="identificador">{{ i.Nombre }} </p>
+                  clave {{ i.clave }}
+                </div>
+              </div>
+
+              <div id="nombreyclave" class="policy-item">
+                <div class="title">
+                  <h3>Sinonimos </h3>
+                </div>
+                <div class="policy-details">
+                  <p class="identificador">Sinonimo 1 {{ i.id.Sinonimo1 }} </p>
+                  <p class="identificador">Sinonimo 2 {{ i.Sinonimo2  }} </p>
+             
                 </div>
               </div>
 
@@ -118,7 +132,7 @@
               <!-- Disclaimer -->
               <div id="metodologia" class="policy-item">
                 <div class="title">
-                  <h3>Metodologia</h3>
+                  <h3>Metodología</h3>
                 </div>
                 <div class="policy-details">
                   <p>{{ i.metodo }}</p>
@@ -179,7 +193,11 @@
                   <h3>Indicaciones</h3>
                 </div>
                 <div class="policy-details">
-                  <p>{{ i.indicaciones }}</p>
+                  
+                  {% for j in i.indicaciones %}
+                   <p>{{ d.Descripcion }}</p>
+                  {% endfor %}
+                  
                 </div>
               </div>
           

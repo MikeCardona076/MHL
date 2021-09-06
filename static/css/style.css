@@ -129,11 +129,7 @@ a {
   color: inherit;
 }
 
-a:focus,
-a:hover {
-  color: #2e7eed;
-  text-decoration: none;
-}
+
 
 .bg-gray {
   background: #fafafa;
@@ -421,19 +417,7 @@ button:focus,
   font-size: 11px;
 }
 
-.main-nav .navbar-nav .nav-item.active .nav-link {
-  color: #2e7eed;
-}
 
-.main-nav .navbar-nav .nav-item.active .nav-link:before {
-  content: '';
-  background: #2e7eed;
-  width: 60%;
-  height: 2px;
-  position: absolute;
-  top: 0;
-  left: 20%;
-}
 
 @media (max-width: 992px) {
   .main-nav .navbar-nav .nav-item.active .nav-link:before {
