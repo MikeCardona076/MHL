@@ -1,7 +1,8 @@
 from django.db import models
 
+
 class Estudio_perfil(models.Model):
-    id = models.AutoField(primary_key=True)
+    Clave = models.IntegerField(unique=True)
     Nombre = models.CharField(max_length=50, null=True, blank=True)
     Precio1 = models.CharField(max_length=10,null=True, blank=True)
     Precio2 = models.CharField(max_length=10, null=True, blank=True)
@@ -46,34 +47,43 @@ class Estudio_perfil(models.Model):
     IdGrupo = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
-        id_Estudio_perfil = '%s' % (self.id)
-        return id_Estudio_perfil
+        clave_estudio = '%s' % (self.Clave)
+        return clave_estudio
 
-        
+
     class Meta:
         managed = True
         db_table = 'estudio_perfil'
-    
-#Clave	Nombre	Grupo	Condicion	Descripcion
+
 
 class Condiciones(models.Model):
-    id = models.AutoField(primary_key=True)
-    Clave = models.ForeignKey(Estudio_perfil, on_delete=models.CASCADE, null=True, blank=True)
-    Nombre = models.CharField(max_length=50, null=True, blank=True)
-    Grupo = models.CharField(max_length=50, null=True, blank=True)
-    Condicion = models.CharField(max_length=50, null=True, blank=True)
-    Descripcion = models.CharField(max_length=50, null=True, blank=True)
+        Clave = models.ForeignKey(Estudio_perfil, on_delete=models.CASCADE)
+        Nombre = models.CharField(max_length=50, null=True, blank=True)
+        Grupo = models.CharField(max_length=50, null=True, blank=True)
+        Condicion = models.CharField(max_length=50, null=True, blank=True)
+        Descripcion = models.CharField(max_length=50, null=True, blank=True)
 
-    class Meta:
-        managed = True
-        db_table = 'Condiciones'
+        #retorna la clave de la condicion
+        def __str__(self):
+            clave_condicion = '%s' % (self.id)
+            return clave_condicion
 
-    if Clave not in Estudio_perfil.objects.all():
-        Clave = " "
+        
 
-    def __str__(self):
-        id_Condicion = '%s' % (self.id)
-        return id_Condicion
+
+        class Meta:
+            managed = True
+            db_table = 'condiciones'
+            verbose_name_plural = "Condiciones"
+
+
+        
+
+
+
+    
+        
+
 
 
     

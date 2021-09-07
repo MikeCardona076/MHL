@@ -15,7 +15,7 @@ admin.site.register(LogEntry)
 class EstudiosResource(resources.ModelResource):
     class Meta:
         model = Estudio_perfil
-        fields = ('id', 'Nombre', 'Precio1', 'Precio2', 'Precio3', 'Precio4', 'Precio5', 'Grupo', 'Tipo', 'Sinonimo1', 'Sinonimo2', 'Tubo', 'Unidades', 'Metodo', 'TipoMuestra', 'Catalogo', 'Tiempo', 'Costo', 'Especiales', 'SexoPrueba', 'Clasifica', 'EstLaboratorio', 'EstGabinete', 'Factor', 'UnidadesInt', 'IdContenedor', 'Equipo', 'Maquilador', 'Indicaciones', 'Area', 'usoClinico', 'nivelBase', 'tProceso', 'CodigoSAT', 'UnidadSAT', 'ImpConsent', 'GpoRecep', 'ClaveExt', 'Moneda', 'impSep', 'impNombreP', 'IdTipoMuestra', 'IdGrupo')
+        fields = ('id','Clave', 'Nombre', 'Precio1', 'Precio2', 'Precio3', 'Precio4', 'Precio5', 'Grupo', 'Tipo', 'Sinonimo1', 'Sinonimo2', 'Tubo', 'Unidades', 'Metodo', 'TipoMuestra', 'Catalogo', 'Tiempo', 'Costo', 'Especiales', 'SexoPrueba', 'Clasifica', 'EstLaboratorio', 'EstGabinete', 'Factor', 'UnidadesInt', 'IdContenedor', 'Equipo', 'Maquilador', 'Indicaciones', 'Area', 'usoClinico', 'nivelBase', 'tProceso', 'CodigoSAT', 'UnidadSAT', 'ImpConsent', 'GpoRecep', 'ClaveExt', 'Moneda', 'impSep', 'impNombreP', 'IdTipoMuestra', 'IdGrupo')
 
 
 class EstudiosAdmin(ImportExportModelAdmin):
@@ -28,6 +28,7 @@ admin.site.register(Estudio_perfil, EstudiosAdmin)
 
 
 #IMPORT EXPORT ESTUIDOS DE Condiciones
+
 class CondicionesResource(resources.ModelResource):
     class Meta:
         model = Condiciones
@@ -36,6 +37,7 @@ class CondicionesResource(resources.ModelResource):
 
 class CondicionesAdmin(ImportExportModelAdmin):
     resource_class = CondicionesResource
+
     
 
 
