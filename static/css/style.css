@@ -3,11 +3,19 @@
 body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-image: url("../images/lab.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  opacity: 0.9;
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
-  color: #000;
+  font-family: "Lora", serif;
+  color: rgb(0, 0, 0);
   font-weight: 300;
 }
 
@@ -157,6 +165,7 @@ a {
 .section-title {
   text-align: center;
   margin-bottom: 80px;
+  background-color: azure;
 }
 
 .section-title h2 {

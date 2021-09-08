@@ -33,13 +33,7 @@
   <!-- CUSTOM CSS -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    
-  <!-- semantic UI -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
+  
 </head>
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
@@ -56,12 +50,13 @@
 		<div class="row">
 			<div class="col-sm-8 m-auto">
 				<!-- Page Title -->
-				<h1>Busqueda de estudios y/o Perfiles de laboratorio</h1>
+        {% for i in estudios_perfiles %}
+				 <h1>{{ i.Nombre }}</h1>
+        {% endfor %}
 				<!-- search bar -->
         <div class="search-bar">
           <form method="get">
             <div class="input-group">
-              <input type="text" class="form-control" id ="exampleFormControlInput1" onkeyup="MyFilterfunctionbyname()" placeholder="Buscar ">
               {% comment %} <span class="input-group-btn">
                 <button type="submit" class="btn btn-primary">
                   <span class="fa fa-search"></span>
@@ -86,21 +81,10 @@
 <section class="privacy section pt-0">
 	<div class="container">
 		<div class="row">
-			<!-- <div class="col-lg-3">
-				<nav class="privacy-nav">
-					<ul>
-						<li><a class="nav-link scrollTo" href="#nombreyclave" class="scrollTo">Nombre y clave</a></li>
-						<li><a class="nav-link scrollTo" href="#metodologia" class="scrollTo">Metodologia</a></li>
-						<li><a class="nav-link scrollTo" href="#grupo" class="scrollTo">Grupo</a></li>
-						<li><a class="nav-link scrollTo" href="#contenedor" class="scrollTo">Contenedor </a></li>
-            <li><a class="nav-link scrollTo" href="#alias" class="scrollTo">Alias</a></li>
-            <li><a class="nav-link scrollTo" href="#tipodemuestra" class="scrollTo">Tipo de muestra</a></li>
-            <li><a class="nav-link scrollTo" href="#sexo" class="scrollTo">Sexo</a></li>
-            <li><a class="nav-link scrollTo" href="#indicaciones" class="scrollTo">Indicaciones</a></li>
-					</ul>
-				</nav>
-			</div> -->
-      <!-- #center -->
+			<div class="col-lg-3">
+
+			</div> 
+    
      
 			<div class="col-lg-12">
 
@@ -109,33 +93,27 @@
               <!-- User License -->
               <div id="nombreyclave" class="policy-item">
                 <div class="title">
-                  <h3>Nombre del estudio y/o perfil de laboratorio</h3>
+                  <h3>Clave interna</h3>
                 </div>
                 <div class="policy-details">
-                  <p class="identificador">{{ i.Nombre }} </p>
-                  clave {{ i.Clave }}
+                  <p class="identificador">{{ i.Clave }} </p>
+              
                 </div>
               </div>
 
-              <div id="nombreyclave" class="policy-item">
-                <div class="title">
-                  <h3>Sinonimos </h3>
-                </div>
-                <div class="policy-details">
-                  <p class="identificador">Sinonimo 1 {{ i.Sinonimo1 }} </p>
-                  <p class="identificador">Sinonimo 2 {{ i.Sinonimo2  }} </p>
-             
-                </div>
-              </div>
-
-
-              <!-- Disclaimer -->
+      
               <div id="metodologia" class="policy-item">
                 <div class="title">
                   <h3>Metodología</h3>
                 </div>
                 <div class="policy-details">
+                  {% if i.metodo %}
                   <p>{{ i.metodo }}</p>
+                  {% else %}
+                  <p>No hay información disponible</p>
+                  {% endif %}
+               
+                 
                 </div>
               </div>
               <!-- Limitations -->
@@ -144,7 +122,12 @@
                   <h3>Grupo</h3>
                 </div>
                 <div class="policy-details">
+                  {% if i.grupo %}
                   <p> {{ i.grupo }}</p>
+                  {% else %}
+                  <p>No hay información disponible</p>
+                  {% endif %}
+
                 </div>
               </div>
               <!-- Governing Law -->
@@ -153,19 +136,14 @@
                   <h3>Contenedor</h3>
                 </div>
                 <div class="policy-details">
+                  {% if i.contenedor %}
                   <p>{{i.contenedor}}</p>
+                  {% else %}
+                  <p>No hay información disponible</p>
+                  {% endif %}
                 </div>
               </div>
               
-              <!-- Alias -->
-              <div id="alias" class="policy-item">
-                <div class="title">
-                  <h3>Alias</h3>
-                </div>
-                <div class="policy-details">
-                  <p>Alias</p>
-                </div>
-              </div>
               
               <!--  Tipo de muestra  -->
               <div id="tipodemuestra" class="policy-item">
@@ -173,7 +151,11 @@
                   <h3>Tipo de Muestra</h3>
                 </div>
                 <div class="policy-details">
+                  {% if i.TipoMuestra %}
                   <p>{{ i.TipoMuestra }}</p>
+                  {% else %}
+                  <p>No hay información disponible</p>
+                  {% endif %}
                 </div>
               </div>
 
@@ -183,7 +165,11 @@
                   <h3>Sexo</h3>
                 </div>
                 <div class="policy-details">
+                  {% if i.sexo %}
                   <p>{{ i.sexo }}</p>
+                  {% else %}
+                  <p>No hay información disponible</p>
+                  {% endif %}
                 </div>
               </div>
 
@@ -194,32 +180,17 @@
                 </div>
                 <div class="policy-details">
                   
-                  {% for j in i.indicaciones %}
-                   <p>{{ d.Descripcion }}</p>
+                  {% for j in condiciones %}
+                    {% if j.Descripcion %}
+                    <p>{{ j.Descripcion }}</p>
+                    {% else %}
+                    <p>No hay información disponible</p>
+                    {% endif %}
                   {% endfor %}
                   
                 </div>
               </div>
           
-                <script>
-                    function MyFilterfunctionbyname() 
-                    {
-                      var filter = document.getElementById("exampleFormControlInput1").value;
-                      var snippets = document.getElementsByClassName("block");
-                      for (var i = 0; i < snippets.length; i++) {
-                        snippets[i].style.display = "none";
-                      }
-                      var myArray = document.getElementsByClassName("block");
-                      for (var i = 0; i < myArray.length; i++) {
-                        var myArrayText = myArray[i].getElementsByClassName("policy-item")[0].innerHTML;
-                        if (myArrayText.toLowerCase().indexOf(filter.toLowerCase()) > -1) {
-                          myArray[i].style.display = "block";
-                        }
-                      }
-                    }
-
-                </script>
-
 				</div>
         {% endfor %}
 			</div>

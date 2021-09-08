@@ -7,6 +7,7 @@ from .view_class_estudios_perfiles_laboratorio import *
 
 ESTUDIOS_PERFILES_URL = [
     path('estudios_perfiles_laboratorio/', estudios_perfiles_laboratorio, name='estudios_perfiles_laboratorio'),
+    path('Detalle/<int:pk>/', estudios_perfiles_laboratorio_id, name='Detalle_estudio'),
 ]
 
 # PACIENTES_PXLABS_URL = [
