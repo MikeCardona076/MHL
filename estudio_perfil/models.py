@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Estudio_perfil(models.Model):
-    Clave = models.IntegerField(unique=True)
+    Clave = models.AutoField(primary_key=True)
     Nombre = models.CharField(max_length=50, null=True, blank=True)
     Precio1 = models.CharField(max_length=10,null=True, blank=True)
     Precio2 = models.CharField(max_length=10, null=True, blank=True)
@@ -67,9 +67,6 @@ class Condiciones(models.Model):
         def __str__(self):
             clave_condicion = '%s' % (self.id)
             return clave_condicion
-
-        
-
 
         class Meta:
             managed = True

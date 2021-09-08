@@ -115,9 +115,92 @@
                   <p class="identificador">{{ i.Nombre }} </p>
                   clave {{ i.Clave }}
                 </div>
-                <button class="btn btn-primary">Ver más</button>
               </div>
 
+              <div id="nombreyclave" class="policy-item">
+                <div class="title">
+                  <h3>Sinonimos </h3>
+                </div>
+                <div class="policy-details">
+                  <p class="identificador">Sinonimo 1 {{ i.Sinonimo1 }} </p>
+                  <p class="identificador">Sinonimo 2 {{ i.Sinonimo2  }} </p>
+             
+                </div>
+              </div>
+
+
+              <!-- Disclaimer -->
+              <div id="metodologia" class="policy-item">
+                <div class="title">
+                  <h3>Metodología</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.metodo }}</p>
+                </div>
+              </div>
+              <!-- Limitations -->
+              <div id="grupo" class="policy-item">
+                <div class="title">
+                  <h3>Grupo</h3>
+                </div>
+                <div class="policy-details">
+                  <p> {{ i.grupo }}</p>
+                </div>
+              </div>
+              <!-- Governing Law -->
+              <div id="contenedor" class="policy-item">
+                <div class="title">
+                  <h3>Contenedor</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{i.contenedor}}</p>
+                </div>
+              </div>
+              
+              <!-- Alias -->
+              <div id="alias" class="policy-item">
+                <div class="title">
+                  <h3>Alias</h3>
+                </div>
+                <div class="policy-details">
+                  <p>Alias</p>
+                </div>
+              </div>
+              
+              <!--  Tipo de muestra  -->
+              <div id="tipodemuestra" class="policy-item">
+                <div class="title">
+                  <h3>Tipo de Muestra</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.TipoMuestra }}</p>
+                </div>
+              </div>
+
+              <!--  Sexo  -->
+              <div id="sexo" class="policy-item">
+                <div class="title">
+                  <h3>Sexo</h3>
+                </div>
+                <div class="policy-details">
+                  <p>{{ i.sexo }}</p>
+                </div>
+              </div>
+
+              <!--  Indicaciones  -->
+              <div id="indicaciones" class="policy-item">
+                <div class="title">
+                  <h3>Indicaciones</h3>
+                </div>
+                <div class="policy-details">
+                  
+                  {% for j in i.indicaciones %}
+                   <p>{{ d.Descripcion }}</p>
+                  {% endfor %}
+                  
+                </div>
+              </div>
+          
                 <script>
                     function MyFilterfunctionbyname() 
                     {
