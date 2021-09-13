@@ -51,7 +51,9 @@
 			<div class="col-sm-8 m-auto">
 				<!-- Page Title -->
         {% for i in estudios_perfiles %}
-				 <h1>{{ i.Nombre }}</h1>
+				 <h1>  {{ i.Nombre }} </h1> 
+          
+         
         {% endfor %}
 				<!-- search bar -->
         <div class="search-bar">
@@ -90,10 +92,14 @@
 
        {% for i in estudios_perfiles %}
 				<div class="block">
+          <div data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000">
+          
               <!-- User License -->
               <div id="nombreyclave" class="policy-item">
                 <div class="title">
-                  <h3>Clave interna</h3>
+                  <h3><i class="ti-key"></i>  Clave interna </h3>
                 </div>
                 <div class="policy-details">
                   <p class="identificador">{{ i.Clave }} </p>
@@ -104,7 +110,7 @@
       
               <div id="metodologia" class="policy-item">
                 <div class="title">
-                  <h3>Metodología</h3>
+                  <h3> <i class="ti-notepad"></i> Metodología </h3> 
                 </div>
                 <div class="policy-details">
                   {% if i.metodo %}
@@ -119,7 +125,7 @@
               <!-- Limitations -->
               <div id="grupo" class="policy-item">
                 <div class="title">
-                  <h3>Grupo</h3>
+                  <h3> <i class="ti-user"></i>Grupo </h3>
                 </div>
                 <div class="policy-details">
                   {% if i.grupo %}
@@ -130,10 +136,11 @@
 
                 </div>
               </div>
+
               <!-- Governing Law -->
               <div id="contenedor" class="policy-item">
                 <div class="title">
-                  <h3>Contenedor</h3>
+                  <h3> <i class="ti-paint-bucket"></i> Contenedor</h3>
                 </div>
                 <div class="policy-details">
                   {% if i.contenedor %}
@@ -148,7 +155,7 @@
               <!--  Tipo de muestra  -->
               <div id="tipodemuestra" class="policy-item">
                 <div class="title">
-                  <h3>Tipo de Muestra</h3>
+                  <h3> <i class="ti-archive"></i>Tipo de Muestra </h3>
                 </div>
                 <div class="policy-details">
                   {% if i.TipoMuestra %}
@@ -162,7 +169,7 @@
               <!--  Sexo  -->
               <div id="sexo" class="policy-item">
                 <div class="title">
-                  <h3>Sexo</h3>
+                  <h3><i class="ti-id-badge"></i> Sexo </h3>
                 </div>
                 <div class="policy-details">
                   {% if i.sexo %}
@@ -176,7 +183,7 @@
               <!--  Indicaciones  -->
               <div id="indicaciones" class="policy-item">
                 <div class="title">
-                  <h3>Indicaciones</h3>
+                  <h3> <i class="ti-folder"></i> Indicaciones</h3>
                 </div>
                 <div class="policy-details">
                   
@@ -190,6 +197,8 @@
                   
                 </div>
               </div>
+
+          </div>
           
 				</div>
         {% endfor %}

@@ -30,6 +30,11 @@
 
   <!-- CUSTOM CSS -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/csshake.min.css' %}">
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 
 </head>
 
@@ -115,6 +120,11 @@
 {% endblock %}
 
 {% block body %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 
 
 <!--====================================
@@ -161,20 +171,32 @@
 		<div class="rounded shadow p-5 bg-white">
 			<div class="row">
 				<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-				    <i class="ti-shine text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">Resultados confiables</h3>
-					<p class="regular text-muted">Resultados altamente confiables </p>
+          <div data-aos="fade-right">
+
+            <i class="ti-shine text-primary h1"></i>
+            <h3 class="mt-4 text-capitalize h5 ">Resultados confiables</h3>
+            <p class="regular text-muted">Resultados altamente confiables </p>
+
+          </div>
 				</div>
 				<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-					<i class="ti-paint-bucket text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">Entregas seguras</h3>
-					<p class="regular text-muted">Entrega de resultados seguras y en tiempo</p>
+          <div data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom">
+            <i class="ti-paint-bucket text-primary h1"></i>
+            <h3 class="mt-4 text-capitalize h5 ">Entregas seguras</h3>
+            <p class="regular text-muted">Entrega de resultados seguras y en tiempo</p>
+          </div>
 				</div>
 				<div class="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center">
-					<i class="ti-thought text-primary h1"></i>
-					<h3 class="mt-4 text-capitalize h5 ">Personal capacitado</h3>
-					<p class="regular text-muted">Nuestro personal esta altamente capacitado</p>
-					</p>
+          <div data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500">
+            <i class="ti-thought text-primary h1"></i>
+            <h3 class="mt-4 text-capitalize h5 ">Personal capacitado</h3>
+            <p class="regular text-muted">Nuestro personal esta altamente capacitado</p>
+          </div>
+					
 				</div>
 			</div>
 		</div>

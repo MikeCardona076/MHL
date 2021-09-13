@@ -11,10 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
- 
-
   
-
 {% block body %}
 <!--================================
 =            Page Title            =
@@ -25,7 +22,17 @@
 		<div class="row">
 			<div class="col-sm-8 m-auto">
 				<!-- Page Title -->
-				<h1>Busqueda de estudios y/o Perfiles de laboratorio</h1>
+        <div class="shake-slow shake-constant shake-constant--hover">
+        <img src="{% static  'images/laboratory_120699.ico' %}">
+        </div>
+				<h1>Busqueda de estudios y/o Perfiles de laboratorio
+          
+       
+          
+        </h1>
+        <!-- <div class="shake-slow shake-constant shake-constant--hover"> 
+          <img src="{% static  'images/laboratory_120699.ico' %}">
+         </div> -->
 				<!-- search bar -->
         <div class="search-bar">
           <form method="get">
@@ -76,41 +83,50 @@
        {% for i in estudios_perfiles %}
 				<div class="block">
               <!-- User License -->
+              
               <div id="nombreyclave" class="policy-item">
+               
                 <div class="title">
+
                     <h3>Nombre del estudio y/o perfil de laboratorio</h3>
                
                 </div>
                 <div class="policy-details">
                   <p class="identificador">{{ i.Nombre }} </p>
+
                 </div>
                 <a class="btn btn-success" href="{% url 'Detalle_estudio' i.pk %}">Detalles</a>
+                
               </div>
 
-                <script>
-                    function MyFilterfunctionbyname() 
-                    {
-                      var filter = document.getElementById("exampleFormControlInput1").value;
-                      var snippets = document.getElementsByClassName("block");
-                      for (var i = 0; i < snippets.length; i++) {
-                        snippets[i].style.display = "none";
-                      }
-                      var myArray = document.getElementsByClassName("block");
-                      for (var i = 0; i < myArray.length; i++) {
-                        var myArrayText = myArray[i].getElementsByClassName("policy-item")[0].innerHTML;
-                        if (myArrayText.toLowerCase().indexOf(filter.toLowerCase()) > -1) {
-                          myArray[i].style.display = "block";
-                        }
-                      }
-                    }
-
-                </script>
-
 				</div>
-        <br />
+
 
         {% endfor %}
+        <script>
+            var estudio = document.getElementsByClassName("block");
+            for (var i = 0; i < estudio.length; i++) {
+              estudio[i].style.display = "none";
+            }
+
+          function MyFilterfunctionbyname() 
+          {
+            var filter = document.getElementById("exampleFormControlInput1").value;
+            var snippets = document.getElementsByClassName("block");
+            for (var i = 0; i < snippets.length; i++) {
+              if (snippets[i].innerHTML.indexOf(filter) > -1) {
+                snippets[i].style.display = "block";
+              } else {
+                snippets[i].style.display = "none";
+              }
+            }
+           
+          }
+          
+
+        </script>
 			</div>
+      
 		</div>
 	</div>
 </section>
