@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
 
+
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
@@ -33,6 +34,9 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/csshake.min.css' %}">
   
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  
 
 
 
@@ -120,10 +124,12 @@
 {% endblock %}
 
 {% block body %}
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+
 
 
 
@@ -156,7 +162,8 @@
 				<p class="text-white mb-5">
 				Tu Laboratorio de confianza
 					</p>
-				<a href="{% url 'contact' %}" class="btn btn-main-md">Contactanos</a>
+				<a href="#" class="btn btn-main-md">Contactanos</a>
+        <!-- {% url 'contact' %} -->
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
 				<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="screenshot">
@@ -218,6 +225,8 @@
   <script src="{% static 'plugins/google-map/gmap.js' %}"></script>
   
   <script src="{% static 'js/script.js' %}"></script>
+
+  
 </body>
 
 </html>
