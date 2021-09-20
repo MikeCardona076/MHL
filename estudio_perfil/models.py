@@ -9,7 +9,7 @@ class Estudio_perfil(models.Model):
     Precio3 = models.CharField(max_length=10, null=True, blank=True)
     Precio4 = models.CharField(max_length=10, null=True, blank=True)
     Precio5 = models.CharField(max_length=10,  null=True, blank=True)
-    Prupo = models.CharField(max_length=50, null=True, blank=True)
+    Grupo = models.CharField(max_length=50, null=True, blank=True)
     Tipo = models.CharField(max_length=50, null=True, blank=True)
     Sinonimo1 = models.CharField(max_length=50, null=True, blank=True)
     Sinonimo2 = models.CharField(max_length=50, null=True, blank=True)
