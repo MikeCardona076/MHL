@@ -4,8 +4,10 @@ from estudio_perfil.models import *
 def estudios_perfiles_laboratorio(request):
     context = {
         #Obtain the first register of the table
-        'estudios_perfiles': Estudio_perfil.objects.all()
+        'estudios_perfiles': Estudio_perfil.objects.filter(Catalogo = 1).order_by('Nombre')
+   
     }
+    
 
     return render(request, 'Small-apps/privacy-policy.html', context)
 
