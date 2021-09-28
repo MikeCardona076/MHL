@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from os import error
 from decouple import config
 from pathlib import Path
-
+from .mensaje import *
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -89,12 +91,35 @@ WSGI_APPLICATION = 'mhl.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
+''''
+Funcion que determina la configuracion de la base de datos
+En caso de emergencia si una Base de datos no funciona se puede usar la Base de datos de backup
+'''
+
+def get_db():
+
+    try:
+        return {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlit3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+            
+        }
+    
+    except:
+        
+        return {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlit3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+            
+        }
+
+
+DATABASES = get_db()
 
 
 # Password validation

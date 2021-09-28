@@ -1157,6 +1157,7 @@ button:focus,
   background: linear-gradient(45deg, #00c53b 0%, #06ca06 20%, #8bdd39 50%);
   
 }
+/* linear-gradient(45deg, #00c53b 0%, #06ca06 20%, #8bdd39 50%) */
 
 .pull-top {
   margin-top: -100px;
