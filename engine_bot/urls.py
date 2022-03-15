@@ -1,6 +1,5 @@
 from django.urls import path
 from .main_mhl import *
-from estudio_perfil.class_views import *
 from .view_class_estudios_perfiles_laboratorio import *
 
 

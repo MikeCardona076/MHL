@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from estudio_perfil.models import Estudio_perfil
+from administradores_mhl.Estudios_laboratorio.estudio_laboratorio import *
 
 
 def index(request):

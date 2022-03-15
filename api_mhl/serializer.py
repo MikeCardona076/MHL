@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from estudio_perfil.models import *
+from administradores_mhl.Estudios_laboratorio.estudio_laboratorio import *
 
 
 class Estudio_Perfil_Serializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Estudio_perfil
+        model = Estudio
         fields = "__all__"

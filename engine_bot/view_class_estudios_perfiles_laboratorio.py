@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from estudio_perfil.models import *
+from administradores_mhl.Estudios_laboratorio.estudio_laboratorio import *
 
 def estudios_perfiles_laboratorio(request):
     context = {
         #Obtain the first register of the table
-        'estudios_perfiles': Estudio_perfil.objects.filter(Catalogo = 1).order_by('Nombre')
+        'estudios_perfiles': Estudio.objects.filter(Catalogo = 1).order_by('Nombre')
    
     }
     
@@ -14,7 +14,7 @@ def estudios_perfiles_laboratorio(request):
 
 def estudios_perfiles_laboratorio_id(request, pk):
     context = {
-        'estudios_perfiles': Estudio_perfil.objects.filter(Clave=pk),
+        'estudios_perfiles': Estudio.objects.filter(Clave=pk),
         'condiciones'  : Condiciones.objects.filter(Clave=pk),
     }
 

@@ -35,9 +35,9 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 MY_APPS = [
-    'estudio_perfil',
+    'administradores_mhl',
     'api_mhl',
-    'paciente_pxlab',
+    'quimicos_mhl',
 ]
 
 EXTERNAL_APPS = [
