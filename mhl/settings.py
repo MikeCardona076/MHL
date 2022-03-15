@@ -38,11 +38,13 @@ MY_APPS = [
     'administradores_mhl',
     'api_mhl',
     'quimicos_mhl',
+    'chat_bot'
 ]
 
 EXTERNAL_APPS = [
     'rest_framework',
     'import_export',
+    'chatterbot.ext.django_chatterbot', 
 ]
 
 
@@ -181,4 +183,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
     
+}
+
+CHATTERBOT = {
+    'name': 'Mike',
+    'logic_adapters': [
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
+    ]
 }

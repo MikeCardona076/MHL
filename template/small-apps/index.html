@@ -19,7 +19,7 @@
   <meta name="generator" content="Themefisher Small Apps Template v1.0">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo.png' %}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'logo.jpg' %}" />
 
   
 
@@ -134,7 +134,9 @@
 
 {% endblock %}
 
+
 {% block body %}
+
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -148,6 +150,7 @@
 =            Hero Section            =
 =====================================-->
 <section class="section gradient-banner">
+
 	<div class="shapes-container">
 		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
 		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
@@ -167,69 +170,34 @@
 		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
 	</div>
 	<div class="container">
+
 		<div class="row align-items-center">
 			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
-				<h1 class="text-white font-weight-bold mb-4">Medical Health Lab</h1>
-				<p class="text-white mb-5">
-				Tu Laboratorio de confianza
-					</p>
-				<a href="#" class="btn btn-main-md">Contactanos</a>
-        <!-- {% url 'contact' %} -->
+				<h1 class="text-white font-weight-bold mb-4"><img class="img-fluid" src="{% static 'logo1.jpg' %}" alt="screenshot" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" style="width: 400px;"></h1>
 			</div>
 			<div class="col-md-6 text-center order-1 order-md-2">
-				<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="screenshot">
+				<img class="img-fluid" src="{% static 'logo2.png' %}" alt="screenshot" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" style="width: 500px;">
 			</div>
 		</div>
 	</div>
 </section>
 <!--====  End of Hero Section  ====-->
 
+
 <section class="section pt-0 position-relative pull-top">
+  <div class="floating-btn">
+    <a href="#" target="_blank">
+      <img src="{% static 'chat.png' %}" alt="screenshot" class="img-fluid" style="width: 80px;">
+    </a>
+  </div>
 	<div class="container">
 		<div class="rounded shadow p-5 bg-white">
 			<div class="row">
         <img src="{% static 'pasos.png' %}" alt="screenshot" class="img-fluid mb-5">
-				<!-- <div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-
-          <div data-aos="fade-right">
-           
-            <i class="mdi-mouse-variant-off"></i>
-            <p class="regular text-muted">busca tu estudio</p>
-
-          </div>
-				</div>
-				<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-          <div data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom">
-            <i class="ti-paint-bucket text-primary h1"></i>
-            <p class="regular text-muted">Realiza tu cotizacion</p>
-          </div>
-				</div>
-        <div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-          <div data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom">
-            <i class="ti-paint-bucket text-primary h1"></i>
-            <p class="regular text-muted">Acude a Medical Health Lab</p>
-          </div>
-				</div>
-				<div class="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center">
-          <div data-aos="fade-left"
-            data-aos-anchor="#example-anchor"
-            data-aos-offset="500"
-            data-aos-duration="500">
-            <i class="ti-thought text-primary h1"></i>
-            <p class="regular text-muted">Encuestra tus resultados en nuestra Pagina</p>
-          </div>
-					
-				</div> -->
 			</div>
 		</div>
 	</div>
-  <div class="floating-btn">
-    <a href="https://api.whatsapp.com/send?phone=573059889900&text=Hola,%20quiero%20una%20cotizacion" target="_blank">
-      <img src="{% static 'whatsapp.png' %}" alt="screenshot" class="img-fluid">
-    </a>
-  </div>
+
 </section>
 
 <!-- Whatsapp floating button -->
