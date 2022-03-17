@@ -188,8 +188,19 @@ REST_FRAMEWORK = {
 CHATTERBOT = {
     'name': 'Mike',
     'logic_adapters': [
+        'chatterbot.logic.BestMatch',
         'chatterbot.logic.MathematicalEvaluation',
         'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.BestMatch'
-    ]
+        #Spanish Adapter
+        
+        {
+            'import_path': 'chatterbot.logic.SpecificResponseAdapter',
+            'default_response': 'Lo siento, aun no tengo esa respuesta.',
+            'maximum_similarity_threshold': 0.90
+
+        },
+    ],
+    'filters': [
+        'filters.get_recent_repeated_responses',
+    ],
 }

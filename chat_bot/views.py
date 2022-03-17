@@ -42,5 +42,5 @@ class ChatterBotApiView(View):
         Return data corresponding to the current conversation.
         """
         return JsonResponse({
-            'name': self.chatterbot.name
+            'name': self.chatterbot.name,
         })

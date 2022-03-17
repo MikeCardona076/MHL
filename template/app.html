@@ -2,21 +2,23 @@
 <!doctype html>
 <html>
   <head>
-    <title>Django ChatterBot Example</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'logo.jpg' %}" />
+    <title>Medical Health Lab AI</title>
     <link rel="stylesheet" href="{% static 'chat/css/bootstrap.css' %}"/>
     <link rel="stylesheet" href="{% static 'chat/css/custom.css' %}"/>
   </head>
   <body>
 
-    {% include 'nav.html' %}
+ 
 
     <div class="container">
 
       <div class="jumbotron mt-1">
-        <h1 class="jumbotron-heading text-xs-center">Django ChatterBot Example</h1>
-        <p class="lead text-xs-center">
-          This is a web app that allows you to talk to ChatterBot.
-        </p>
+        <h1 class="jumbotron-heading text-xs-center">Medical Health Lab AI</h1>
+        <!-- <p class="lead text-xs-center">
+
+         
+        </p> -->
 
         <hr class="my-2">
 
@@ -26,9 +28,9 @@
             </ul>
 
             <div class="input-group input-group-lg mt-1">
-              <input type="text" class="form-control js-text" placeholder="Type something to begin..."/>
+              <input type="text" class="form-control js-text" placeholder="Escribir..."/>
               <span class="input-group-btn">
-                <button class="btn btn-primary js-say">Submit</button>
+                <button class="btn btn-primary js-say">Enviar</button>
               </span>
             </div>
             
@@ -44,6 +46,8 @@
     <script src="{% static 'chat/js/bootstrap.js' %}"></script>
     <script>
       var chatterbotUrl = '{% url "chatterbot" %}';
+      //CSRF token
+
       var csrftoken = Cookies.get('csrftoken');
 
       function csrfSafeMethod(method) {
